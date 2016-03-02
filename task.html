@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="Person.js"></script>
+<script src="Account.js"></script>
+<script src="transferService.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var birth1 = new Date(2000, 0, 12);
+var birth2 = new Date(1993, 2, 16);
+var birth3 = new Date(1983, 3, 22);
+
+var alex=new Person("Alex", birth1);
+var petr=new Person("Petr", birth2);
+var anna=new Person("Anna", birth2);
+
+var firstAccount = new Account("firstAccount");
+var secondAccount = new Account("secondAccount");
+var thirdAccount = new Account("thirdAccount");
+var noActivedAccount = new Account("Blabla");
+
+//transferService.register(alex, firstAccount, -100);
+transferService.register(alex, firstAccount, 100);
+transferService.register(alex, secondAccount, 700);
+//console.log("Print\n");
+//firstAccount.printToConsole();
+transferService.register(petr, thirdAccount, 200);
+//console.log("Print\n");
+//secondAccount.printToConsole();
+console.log("Transfer:\n");
+//transferService.transfer(firstAccount, thirdAccount, 150);
+//transferService.transfer(noActivedAccount, thirdAccount, 50);
+transferService.transfer(firstAccount, thirdAccount, 50);
+console.log("getPersonAccounts:\n");
+transferService.getPersonAccounts(alex);
+//transferService.getPersonAccounts(anna);
+//transferService.getPersonAccounts(12);
+//transferService.getPersonAccounts(null);
+  </script>
+</body>
+</html>
