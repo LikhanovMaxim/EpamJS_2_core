@@ -6,13 +6,12 @@ function Account(accountName) {
   this._person = null;
   this._lastOperation = null;
 };
-
-Account.prototype.logName = function () {
-  console.log("Account name: " + this._accountName + "\nlastOperation: " + this._lastOperation + "\nBalance: " + this._balance ); 
-};
 Account.prototype.toString = function () {
   var str = "Account name: " + this._accountName + "\nlastOperation: " + this._lastOperation + "\nBalance: " + this._balance; 
   return str;
+};
+Account.prototype.logName = function () {
+  console.log(this.toString()); 
 };
 Account.prototype.printToConsole = function () {
   console.log(this.toString());
