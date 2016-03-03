@@ -1,8 +1,8 @@
 "use strict";
 function Account(accountName) {
   this._accountName = accountName;
-  this._balance = new Number(0.0);
-  this._isActivated = new Boolean(false);
+  this._balance = 0.0;
+  this._isActivated = false;
   this._person = null;
   this._lastOperation = null;
 };
