@@ -20,23 +20,13 @@ var secondAccount = new Account("secondAccount");
 var thirdAccount = new Account("thirdAccount");
 var noActivedAccount = new Account("Blabla");
 
-//transferService.register(alex, firstAccount, -100);
 transferService.register(alex, firstAccount, 100);
 transferService.register(alex, secondAccount, 700);
-//console.log("Print\n");
-//firstAccount.printToConsole();
 transferService.register(petr, thirdAccount, 200);
-//console.log("Print\n");
-//secondAccount.printToConsole();
 console.log("Transfer:\n");
-//transferService.transfer(firstAccount, thirdAccount, 150);
-//transferService.transfer(noActivedAccount, thirdAccount, 50);
 transferService.transfer(firstAccount, thirdAccount, 50);
 console.log("getPersonAccounts:\n");
 transferService.getPersonAccounts(alex);
-//transferService.getPersonAccounts(anna);
-//transferService.getPersonAccounts(12);
-//transferService.getPersonAccounts(null);
   </script>
 </body>
 </html>
