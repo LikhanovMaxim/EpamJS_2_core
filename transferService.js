@@ -65,10 +65,6 @@ var transferService = (function () {
 	  }
   }
   function getPersonAccounts(person){
-	  //var comp = new Person();
-//	  if(!(person instanceof comp)){
-//		//  
-//	  }
 	  if(!person){
 		  throw new TypeError("The person not suitable this type");
 	  }
